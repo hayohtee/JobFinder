@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Job Finder</string>
+    <string name="onboarding_title">Find a Perfect Job Match</string>
+    <string name="onboarding_label">
+        Finding your dream job is more easier and faster with Job Finder
+    </string>
+    <string name="onboarding_button_label">Let\'s Get Started</string>
 </resources>
