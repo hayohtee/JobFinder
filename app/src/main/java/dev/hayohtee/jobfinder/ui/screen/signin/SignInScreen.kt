@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.KeyboardOptions
@@ -46,7 +47,9 @@ fun SignInScreen(
     modifier: Modifier = Modifier
 ) {
     Column(
-        modifier = modifier.padding(dimensionResource(id = R.dimen.medium)),
+        modifier = modifier
+            .safeDrawingPadding()
+            .padding(dimensionResource(id = R.dimen.medium)),
         verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.medium))
     ) {
         SignInHeader(modifier = Modifier.fillMaxWidth(0.7f))
