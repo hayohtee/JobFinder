@@ -5,4 +5,15 @@
         Finding your dream job is more easier and faster with Job Finder
     </string>
     <string name="onboarding_button_label">Let\'s Get Started</string>
+    <string name="sign_in_screen_title">Welcome Back!</string>
+    <string name="sign_in_screen_subtitle">Fill your details or continue with social media</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget password?</string>
+    <string name="sign_in">Sign In</string>
+    <string name="continue_with_label">Or continue with</string>
+    <string name="is_new_user">New User?</string>
+    <string name="create_account">Create Account</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
 </resources>
