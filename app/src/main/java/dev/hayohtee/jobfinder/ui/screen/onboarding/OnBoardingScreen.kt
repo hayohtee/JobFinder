@@ -2,11 +2,11 @@ package dev.hayohtee.jobfinder.ui.screen.onboarding
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.safeDrawingPadding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
@@ -22,52 +22,50 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import dev.hayohtee.jobfinder.R
 import dev.hayohtee.jobfinder.ui.theme.JobFinderTheme
-import dev.hayohtee.jobfinder.ui.theme.Rubik
 
 @Composable
 fun OnBoardingScreen(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    Box(
-        modifier = modifier.padding(dimensionResource(id = R.dimen.medium)),
-        contentAlignment = Alignment.Center
+    Column(
+        modifier = modifier
+            .safeDrawingPadding()
+            .padding(dimensionResource(id = R.dimen.medium)),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.medium))
     ) {
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.spacedBy(dimensionResource(id = R.dimen.medium))
-        ) {
-            Image(
-                painter = painterResource(id = R.drawable.undraw_co_workers),
-                contentDescription = null,
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(bottom = dimensionResource(id = R.dimen.large))
+        Image(
+            painter = painterResource(id = R.drawable.undraw_co_workers),
+            contentDescription = null,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = dimensionResource(id = R.dimen.large))
+        )
+        Text(
+            text = stringResource(id = R.string.onboarding_title),
+            style = MaterialTheme.typography.titleLarge.copy(
+                fontWeight = FontWeight.Medium
             )
+        )
+        Text(
+            text = stringResource(id = R.string.onboarding_label),
+            style = MaterialTheme.typography.bodyLarge.copy(
+                textAlign = TextAlign.Center,
+                fontWeight = FontWeight.Light
+            )
+        )
+        Button(
+            onClick = onClick,
+            modifier = Modifier.fillMaxWidth(),
+            shape = RoundedCornerShape(30)
+        ) {
             Text(
-                text = stringResource(id = R.string.onboarding_title),
-                style = MaterialTheme.typography.titleLarge.copy(
+                text = stringResource(id = R.string.onboarding_button_label),
+                style = MaterialTheme.typography.bodyLarge.copy(
                     fontWeight = FontWeight.Medium
                 )
             )
-            Text(
-                text = stringResource(id = R.string.onboarding_label),
-                style = MaterialTheme.typography.bodyMedium.copy(
-                    fontFamily = Rubik,
-                    textAlign = TextAlign.Center,
-                    fontWeight = FontWeight.Light
-                )
-            )
-            Button(
-                onClick = onClick,
-                modifier = Modifier.fillMaxWidth(),
-                shape = RoundedCornerShape(30)
-            ) {
-                Text(
-                    text = stringResource(id = R.string.onboarding_button_label),
-                    style = MaterialTheme.typography.labelMedium
-                )
-            }
         }
     }
 }
