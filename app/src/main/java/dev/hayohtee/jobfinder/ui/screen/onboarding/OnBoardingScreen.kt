@@ -1,4 +1,4 @@
-package dev.hayohtee.jobfinder.ui.screen
+package dev.hayohtee.jobfinder.ui.screen.onboarding
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
