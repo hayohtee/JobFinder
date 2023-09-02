@@ -16,4 +16,9 @@
     <string name="create_account">Create Account</string>
     <string name="google">Google</string>
     <string name="facebook">Facebook</string>
+    <string name="sign_up_screen_title">Create Account</string>
+    <string name="username">Username</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="navigate_back">Navigate back</string>
+    <string name="already_have_an_account">Already have an account?</string>
 </resources>
